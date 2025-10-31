@@ -1,4 +1,4 @@
-import { Home, Package, Camera, Star, Calendar } from "lucide-react";
+import { Home, Package, Cctv, Star, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const navItems = [
     { icon: Home, label: "Home", path: "/" },
     { icon: Package, label: "Services", path: "/services" },
-    { icon: Camera, label: "Live CCTV", path: "/cctv" },
+    { icon: Cctv, label: "CCTV", path: "/cctv" },
     { icon: Star, label: "Reviews", path: "/testimonials" },
     { icon: Calendar, label: "Booking", path: "/booking" },
   ];
