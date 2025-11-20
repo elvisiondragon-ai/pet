@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/elternit/pet.elvisiongroup.com/
+    - bun install
+    - bun run build
+    - /bin/cp -R dist/* $DEPLOYPATH
