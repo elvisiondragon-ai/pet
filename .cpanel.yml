@@ -2,6 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/elternit/pet.elvisiongroup.com/
-    - bun install
-    - bun run build
+    - npm install
+    - npm run build
     - /bin/cp -R dist/* $DEPLOYPATH
