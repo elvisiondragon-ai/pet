@@ -1,17 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/elternit/public_html/pet
-    - /usr/bin/npm install
-    - /usr/bin/npm run build
-    - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/cp -R dist/* $DEPLOYPATH
-    - echo "
-        RewriteEngine On
-        RewriteBase /
-        RewriteRule ^index\.html$ - [L]
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteCond %{REQUEST_FILENAME} !-l
-        RewriteRule . /index.html [L]
-      " > $DEPLOYPATH/.htaccess
+    - export DEPLOYPATH=/home1/elternit/public_html/pet/
+    - /bin/touch ${DEPLOYPATH}deployment_test.txt
