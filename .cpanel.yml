@@ -1,7 +1,17 @@
 ---
 deployment:
   tasks:
-    - npm install
-    - npm run build
-    - rm -rf /home1/elternit/public_html/pet/*
-    - cp -R dist/. /home1/elternit/public_html/pet/
+    - export DEPLOYPATH=/home1/elternit/public_html/pet
+    - /usr/bin/npm install
+    - /usr/bin/npm run build
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R dist/* $DEPLOYPATH
+    - echo "
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteRule . /index.html [L]
+      " > $DEPLOYPATH/.htaccess
