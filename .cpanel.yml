@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/elternit/pet.elvisiongroup.com/
     - npm install
     - npm run build
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - rm -rf /home1/elternit/pet.elvisiongroup.com/*
+    - cp -R dist/. /home1/elternit/pet.elvisiongroup.com/
