@@ -3,5 +3,5 @@ deployment:
   tasks:
     - npm install
     - npm run build
-    - rm -rf /home1/elternit/pet.elvisiongroup.com/*
-    - cp -R dist/. /home1/elternit/pet.elvisiongroup.com/
+    - rm -rf /home1/elternit/public_html/pet/*
+    - cp -R dist/. /home1/elternit/public_html/pet/
