@@ -1,8 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/elternit/public_html/pet/
     - npm install
     - npm run build
-    - /bin/rm -rf ${DEPLOYPATH}*
-    - /bin/cp -R dist/. $DEPLOYPATH
+    - rm -rf /home1/elternit/public_html/pet/*
+    - cp -R dist/. /home1/elternit/public_html/pet/
