@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/elternit/pet.elvisiongroup.com/
+    - export DEPLOYPATH=/home1/elternit/public_html/pet/
     - npm install
     - npm run build
     - /bin/rm -rf ${DEPLOYPATH}*
