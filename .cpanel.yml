@@ -1,10 +1,10 @@
 ---
 deployment:
   tasks:
-    - /bin/npm install
-    - /bin/npm run build
-    - /bin/rm -rf /home1/elternit/public_html/pet/*
-    - /bin/cp -R dist/. /home1/elternit/public_html/pet/
-    - /bin/cp public/.htaccess /home1/elternit/public_html/pet/
-    - /bin/find /home1/elternit/public_html/pet/ -type d -exec chmod 755 {} \;
-    - /bin/find /home1/elternit/public_html/pet/ -type f -exec chmod 644 {} \;
+    - npm install
+    - npm run build
+    - rm -rf /home1/elternit/public_html/pet/dist/*
+    - cp -R dist/. /home1/elternit/public_html/pet/dist/
+    - cp public/.htaccess /home1/elternit/public_html/pet/dist/
+    - find /home1/elternit/public_html/pet/dist/ -type d -exec chmod 755 {} \;
+    - find /home1/elternit/public_html/pet/dist/ -type f -exec chmod 644 {} \;
