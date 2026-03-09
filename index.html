@@ -17,11 +17,20 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#ffd700" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/favicon.ico" />
+    <script type="module" crossorigin src="/assets/index-C2H3vXpb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DmXFa0sK.css">
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>
+        const APP_VERSION = '2026.03.10.01';
+        if (typeof window !== 'undefined' && localStorage.getItem('v_cache') !== APP_VERSION) {
+            localStorage.clear();
+            localStorage.setItem('v_cache', APP_VERSION);
+            window.location.reload();
+        }
+    </script>
+</body>
 </html>
